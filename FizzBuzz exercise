@@ -1,0 +1,49 @@
+/* 
+The Task:
+Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. 
+For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead. 
+When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 
+(and still print "Fizz" or "Buzz" for numbers divisible by only one of those). 
+
+
+This sample code will -Loop- through an array called "arrayBuzz". This one is a little different from 
+	the other one because instead of just looping through an array and printing the numbers, you -"Push"- the numbers
+	into an array called "arrayBuzz". This sample code Loops through an array and "Push" the numbers into the 
+	array from 1 to 100 with a twist. 
+
+   For every number that is divisible by 3 it will print "Fizz". 
+   For every number that is divisible by 5 it will print "Buzz".
+   But for the numbers that are divisible by both 3 and 5 it will print "FizzBuzz".
+
+   Also, you will notice that you have to -return- the array called "arrayBuzz".
+
+   Also, notice that you must call the function because unlike the other one, everything is nested inside 
+   of a function in order for it to run.
+
+*/
+
+
+let fizzBuzz = function () {
+
+
+let arrayBuzz = [];
+
+
+		for (let i = 1; arrayBuzz.length < 101; i++) {
+				if (i % 5 === 0 && i % 3 === 0) {
+					arrayBuzz.push("FizzBuzz");
+				} else if (i % 3 === 0) {
+					arrayBuzz.push("Fizz");
+				} else if (i % 5 === 0) {
+					arrayBuzz.push("Buzz");
+				} else {
+					arrayBuzz.push(i);
+				}
+
+		}
+
+			return arrayBuzz;
+
+}
+
+		console.log(fizzBuzz());
